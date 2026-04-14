@@ -25,8 +25,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">1. Acceptance of Terms</h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-By accessing and using JCI Connect (the {"Service"}), operated by JCI Connect Inc. ({'"us", "we", 
-or "our"'}), you agree to be bound by these Terms of Service ({'"Terms"'}), our{' '}
+By accessing and using JCI Connect (the {"Service"}), operated by JCI Connect Inc. ("us", "we", 
+or "our"), you agree to be bound by these Terms of Service ("Terms"), our{' '}
               <Link href="/privacy" className="text-emerald-600 hover:text-emerald-700 font-semibold">Privacy Policy</Link>, 
               and all applicable laws and regulations.
             </p>

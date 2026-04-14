@@ -85,10 +85,10 @@ export default function RootLayout({
             <div className="grid md:grid-cols-4 gap-8 items-center">
               {/* Logo & Description */}
               <div className="flex flex-col items-start md:items-center">
-                <a href="/" className="flex items-center gap-2 mb-4 text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-<img src="/globe.svg" alt="JCI Connect" width={32} height={32} className="dark:invert" />
+                <Link href="/" className="flex items-center gap-2 mb-4 text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+<Image src="/globe.svg" alt="JCI Connect" width={32} height={32} className="dark:invert" />
                   JCI Connect
-                </a>
+                </Link>
                 <p className="text-sm text-gray-600 dark:text-gray-400 max-w-md">
                   Global social network connecting young leaders worldwide.
                 </p>
@@ -109,10 +109,10 @@ export default function RootLayout({
               <div>
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Company</h4>
                 <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                  <li><a href="/about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About JCI</a></li>
-                  <li><a href="/privacy" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Privacy</a></li>
-                  <li><a href="/terms" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Terms</a></li>
-                  <li><a href="/contact" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a></li>
+                  <li><Link href="/about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About JCI</Link></li>
+                  <li><Link href="/privacy" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Privacy</Link></li>
+                  <li><Link href="/terms" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Terms</Link></li>
+                  <li><Link href="/contact" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</Link></li>
                 </ul>
               </div>
               
