@@ -17,7 +17,7 @@ export default function ContactPage() {
     setTimeout(() => setStatus(''), 5000);
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
