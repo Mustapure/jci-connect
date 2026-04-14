@@ -1,12 +1,6 @@
 'use client';
 import { useState } from 'react';
 
-
-export const metadata = {
-  title: 'Contact Us - JCI Connect',
-  description: 'Get in touch with JCI Connect support team',
-};
-
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
