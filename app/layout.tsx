@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -31,8 +32,8 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               {/* Logo */}
-              <a href="/" className="flex items-center gap-2 text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">
-<img
+<Link href="/" className="flex items-center gap-2 text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">
+<Image
                   src="/globe.svg"
                   alt="JCI Connect"
                   width={32}
@@ -40,29 +41,29 @@ export default function RootLayout({
                   className="dark:invert"
                 />
                 JCI Connect
-              </a>
+              </Link>
               
               {/* Navigation - Desktop */}
               <nav className="hidden md:flex items-center gap-8">
-                <a href="/" className="text-lg font-semibold text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors py-2">Home</a>
-                <a href="/events" className="text-lg font-semibold text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors py-2">Events</a>
-                <a href="/connect" className="text-lg font-semibold text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors py-2">Connect</a>
+<Link href="/" className="text-lg font-semibold text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors py-2">Home</Link>
+                <Link href="/events" className="text-lg font-semibold text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors py-2">Events</Link>
+                <Link href="/connect" className="text-lg font-semibold text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors py-2">Connect</Link>
               </nav>
               
               {/* CTA Buttons - Desktop */}
               <div className="hidden md:flex items-center gap-3">
-                <a
+                <Link
                   href="/login"
                   className="px-6 py-2 text-sm font-semibold text-gray-700 border border-gray-200 rounded-xl hover:border-gray-300 hover:bg-gray-50 dark:text-gray-300 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-800/50 transition-all"
                 >
                   Login
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/signup"
                   className="px-6 py-2 text-sm font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transition-all"
                 >
                   Sign Up
-                </a>
+                </Link>
               </div>
               
               {/* Mobile menu button */}
@@ -97,10 +98,10 @@ export default function RootLayout({
               <div>
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Links</h4>
                 <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                  <li><a href="/" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a></li>
-                  <li><a href="/events" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Events</a></li>
-                  <li><a href="/connect" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Connect</a></li>
-                  <li><a href="/about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a></li>
+                <li><Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</Link></li>
+                  <li><Link href="/events" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Events</Link></li>
+                  <li><Link href="/connect" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Connect</Link></li>
+                  <li><Link href="/about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</Link></li>
                 </ul>
               </div>
               

@@ -25,7 +25,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">1. Introduction</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              JCI Connect ("we", "our", "us") respects your privacy and is committed to protecting your personal data. 
+JCI Connect ({'"we", "our", "us"'}) respects your privacy and is committed to protecting your personal data. 
               This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website 
               <Link href="/" className="text-blue-600 hover:text-blue-700 font-semibold">jci-connect.com</Link>, 
               use our mobile application, or otherwise engage with our services.
@@ -112,7 +112,7 @@ export default function PrivacyPage() {
               </div>
             </div>
             <blockquote className="border-l-4 border-gray-300 pl-6 italic text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-800/50 py-4 rounded-r-lg">
-              "We never sell your personal data to third parties"
+              {"We never sell your personal data to third parties"}
             </blockquote>
           </section>
 

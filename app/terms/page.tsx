@@ -25,8 +25,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">1. Acceptance of Terms</h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              By accessing and using JCI Connect (the "Service"), operated by JCI Connect Inc. ("us", "we", 
-              or "our"), you agree to be bound by these Terms of Service ("Terms"), our{' '}
+By accessing and using JCI Connect (the {"Service"}), operated by JCI Connect Inc. ({'"us", "we", 
+or "our"'}), you agree to be bound by these Terms of Service ({'"Terms"'}), our{' '}
               <Link href="/privacy" className="text-emerald-600 hover:text-emerald-700 font-semibold">Privacy Policy</Link>, 
               and all applicable laws and regulations.
             </p>
@@ -118,7 +118,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">6. Service Availability</h2>
             <ul className="space-y-3 text-gray-700 dark:text-gray-300">
-              <li><strong>"AS IS" Basis:</strong> No warranty of uninterrupted access</li>
+<strong>{'"AS IS" Basis:'}</strong> No warranty of uninterrupted access</li>
               <li><strong>Maintenance:</strong> Scheduled downtime with advance notice</li>
               <li><strong>Backups:</strong> Daily automatic backups retained 30 days</li>
               <li><strong>Uptime:</strong> 99.9% SLA guarantee</li>
