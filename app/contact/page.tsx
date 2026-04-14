@@ -198,7 +198,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="text-4xl mb-4">⚡</div>
-                  <div className="text-3xl font-bold mb-2"><24h</div>
+                  <div className="text-3xl font-bold mb-2">{'<24h'}</div>
                   <p className="opacity-90">Response Time</p>
                 </div>
               </div>
