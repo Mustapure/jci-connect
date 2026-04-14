@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -23,11 +24,118 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+        {/* Header */}
+        <header className="bg-white/80 backdrop-blur-md border-b border-gray-200/50 dark:bg-gray-900/80 dark:border-gray-700/50 shadow-lg sticky top-0 z-50 supports-[backdrop-filter:blur()]:bg-white/90 supports-[backdrop-filter:blur()]:dark:bg-gray-900/90">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              {/* Logo */}
+              <a href="/" className="flex items-center gap-2 text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">
+<img
+                  src="/globe.svg"
+                  alt="JCI Connect"
+                  width={32}
+                  height={32}
+                  className="dark:invert"
+                />
+                JCI Connect
+              </a>
+              
+              {/* Navigation - Desktop */}
+              <nav className="hidden md:flex items-center gap-8">
+                <a href="/" className="text-lg font-semibold text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors py-2">Home</a>
+                <a href="/events" className="text-lg font-semibold text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors py-2">Events</a>
+                <a href="/connect" className="text-lg font-semibold text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors py-2">Connect</a>
+              </nav>
+              
+              {/* CTA Buttons - Desktop */}
+              <div className="hidden md:flex items-center gap-3">
+                <a
+                  href="/login"
+                  className="px-6 py-2 text-sm font-semibold text-gray-700 border border-gray-200 rounded-xl hover:border-gray-300 hover:bg-gray-50 dark:text-gray-300 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-800/50 transition-all"
+                >
+                  Login
+                </a>
+                <a
+                  href="/signup"
+                  className="px-6 py-2 text-sm font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transition-all"
+                >
+                  Sign Up
+                </a>
+              </div>
+              
+              {/* Mobile menu button */}
+              <button className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </header>
+        
+        {/* Main Content */}
+        <main className="flex-1 w-full">{children}</main>
+        
+        {/* Footer */}
+        <footer className="bg-white/50 backdrop-blur-md border-t border-gray-200/30 dark:bg-gray-900/50 dark:border-gray-700/30 shadow-lg">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="grid md:grid-cols-4 gap-8 items-center">
+              {/* Logo & Description */}
+              <div className="flex flex-col items-start md:items-center">
+                <a href="/" className="flex items-center gap-2 mb-4 text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+<img src="/globe.svg" alt="JCI Connect" width={32} height={32} className="dark:invert" />
+                  JCI Connect
+                </a>
+                <p className="text-sm text-gray-600 dark:text-gray-400 max-w-md">
+                  Global social network connecting young leaders worldwide.
+                </p>
+              </div>
+              
+              {/* Navigation Links */}
+              <div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Links</h4>
+                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                  <li><a href="/" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a></li>
+                  <li><a href="/events" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Events</a></li>
+                  <li><a href="/connect" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Connect</a></li>
+                  <li><a href="/about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a></li>
+                </ul>
+              </div>
+              
+              {/* Company */}
+              <div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Company</h4>
+                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                  <li><a href="/about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About JCI</a></li>
+                  <li><a href="/privacy" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Privacy</a></li>
+                  <li><a href="/terms" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Terms</a></li>
+                  <li><a href="/contact" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a></li>
+                </ul>
+              </div>
+              
+              {/* Social & Copyright */}
+              <div className="flex flex-col items-start md:items-end">
+                <div className="flex gap-4 mb-6">
+                  <a href="#" className="w-10 h-10 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/50 dark:hover:bg-blue-800/50 rounded-xl flex items-center justify-center transition-all text-blue-600 dark:text-blue-400">
+                    📘
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-green-100 hover:bg-green-200 dark:bg-green-900/50 dark:hover:bg-green-800/50 rounded-xl flex items-center justify-center transition-all text-green-600 dark:text-green-400">
+                    💬
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-pink-100 hover:bg-pink-200 dark:bg-pink-900/50 dark:hover:bg-pink-800/50 rounded-xl flex items-center justify-center transition-all text-pink-600 dark:text-pink-400">
+                    💕
+                  </a>
+                </div>
+                <p className="text-xs text-gray-500 dark:text-gray-500">
+                  © 2024 JCI Connect. All rights reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }

@@ -1,7 +1,10 @@
-# JCI Connect Social Networking Page Implementation Plan
+# JCI Connect: Header and Footer Implementation
 
-## Steps:
-- [x] 1. Create this TODO.md file.
-- [x] 2. Edit app/page.tsx to implement the social networking homepage.
-- [x] 3. Preview changes with `npm run dev` at http://localhost:3000.
-- [x] 4. Mark complete.
+## TODO Steps
+- [x] Step 1: Update app/layout.tsx to add Header, Main, and Footer components with proper flex layout
+- [x] Step 2: Add styles to app/globals.css if custom CSS needed beyond Tailwind
+- [ ] Step 3: Test the layout by running `npm run dev` and verify header/footer appear on all pages
+- [ ] Step 4: Polish responsiveness and dark mode if issues found
+
+## Current Progress
+Step 1 & 2 complete (no custom CSS needed, all Tailwind). Ready for testing.
