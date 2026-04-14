@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export const metadata = {
   title: 'Events - JCI Connect',
@@ -37,17 +36,7 @@ export default function EventsPage() {
     }
   ];
 
-  const pastEvents = [
-    {
-      id: 4,
-      title: 'World Congress 2024',
-      location: 'Tokyo, Japan',
-      date: 'Oct 10-13, 2024',
-      attendees: 3500,
-      image: '/globe.svg',
-      type: 'World'
-    }
-  ];
+
 
   return (
     <div className="flex flex-col flex-1 bg-gradient-to-br from-orange-50 to-yellow-50 font-sans dark:from-gray-900 dark:to-black min-h-screen p-8">
