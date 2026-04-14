@@ -10,14 +10,14 @@ export default function ContactPage() {
   });
   const [status, setStatus] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Simulate form submission
     setStatus('Message sent! We\'ll reply within 24 hours.');
     setTimeout(() => setStatus(''), 5000);
   };
 
-  const handleChange = (e: React.ChangeEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
